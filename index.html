@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="header">
+        <div id="title">
+            <h1>Book Library</h1>
+        </div>
+        <div id="project-info">
+            <p>
+            This is a library app created in accordance with The Odin Project.
+            The goal of the project is to learn about prototypes and inheritance, 
+            as well as trying local storage. I also want to get familar with resizing
+            using @media.
+            </p>
+        </div>
+    </div>
+    <div id="submit-book">
+        <form id="book-submission">
+            <label for="book-title">Title:</label>
+            <input type="text" id="book-title" required>
+            
+            <label for="author">Author:</label>
+            <input type="text" id="author" required>
+            
+            <select name="read" id="read-status">Status
+                <option value="Read">Read</option>
+                <option value="Not read">Not read</option>
+            </select>
+
+            <button id="submit-button" type="button">Add to Library</button>
+        </form>
+    </div>
+    <div id="library-container">
+        <div class="book-card">
+            <div class="book-card-title">A House of Leaves</div>
+            <div class="book-card-author">by Mark Danielewski</div>
+            <div class="book-card-read-status">Read</div>
+            <div class="book-card-delete-button">Delete book</div>
+        </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
