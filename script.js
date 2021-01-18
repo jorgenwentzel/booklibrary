@@ -84,10 +84,10 @@ function deleteBook(targetBook) {
 }
 
 function flipReadStatus(targetBook) {
-    if (book.readStatus == "Read") {
+    if (book.readStatus === "Read") {
         book.readStatus = "Not read";
     }
-    else if (book.readStatus == "Not read") {
+    else if (book.readStatus === "Not read") {
         book.readStatus = "Read"
     }
     saveToLocal();
@@ -108,10 +108,10 @@ submitButton.addEventListener("click", inputCheck);
 
 libraryDisplay.addEventListener("click", (e) => {
     const currentTarget = e.target.parentNode.firstChild;
-    if (e.target.textContent == "Delete book") {
+    if (e.target.textContent === "Delete book") {
         deleteBook(getBookFromLibrary(myLibrary, currentTarget.textContent));
     }
-    else if (e.target.textContent == "Read" || e.target.textContent == "Not read") {
+    else if (e.target.textContent === "Read" || e.target.textContent == "Not read") {
         flipReadStatus(getBookFromLibrary(myLibrary, currentTarget.textContent));
     }
     populateDisplay();
